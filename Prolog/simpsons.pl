@@ -9,9 +9,15 @@ padre(abraham, abbey).
 
 % Se designan las madres de cada integrante
 madre(marge, maggie).
-madre(marge, maggie).
+madre(marge, lisa).
 madre(marge, bart).
 madre(jacqueline, marge).
 madre(jacqueline, selma).
 madre(jacqueline, patty).
 madre(mona, homero).
+
+%Regla para ver a los abuelos
+
+%Regla para ver a los tios
+
+%Regla para ver a los hermanos
