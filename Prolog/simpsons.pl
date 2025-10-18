@@ -26,6 +26,7 @@ progenitor(P, H) :- padre(P, H).
 progenitor(P, H) :- madre(P, H).
 
 % Abuelos
+% A es abuelo o abuela de N si A es padre de P y P es progenitor de N
 abuelo(A, N) :-
     padre(A, P),
     progenitor(P, N).
@@ -38,6 +39,7 @@ esAbuelo(A) :- abuelo(A, _); abuela(A, _).
 
 
 % Hermanos
+% H1 es hermano de H2 si P es progenitor de H1 y H2 y si H1 es diferente de H2
 sonHermanos(H1, H2) :-
     progenitor(P, H1),
     progenitor(P, H2),
@@ -47,9 +49,9 @@ tieneHermanos(H) :- sonHermanos(H, _).
 
 
 % Tíos
-
+% T es tio de S si T es hermano de P y P es progenitor de S
 tio(T, S) :-
-    hermano(T, P),
+    sonHermanos(T, P),
     progenitor(P, S).
 
 esTio(T) :- tio(T, _).
