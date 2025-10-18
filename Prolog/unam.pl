@@ -1,22 +1,30 @@
-%Hechos
+% --- HECHOS ---
+
+% Definicion de Puma
+
 esPuma(felino).
-esPuma(mamifero).
-esPuma(beige).
-esPuma(colmillos).
-esPuma(bigotes).
 esPuma(carnivoro).
+esPuma(nocturno).
+esPuma(grande).
 
-esUniversitario(humano).
-esUniversitario(mamifero).
-esUniversitario(omnivoro).
-esUniversitario(unam, ipn, uam, paga).
+% Definicion de Universitario
 
+esUniversitario(unam).
+esUniversitario(ipn).
+esUniversitario(uam).
+esUniversitario(paga).
+esUniversitario(mascota).
+
+% Definicion de Aragones
+
+esAragones(fesAragon).
 esAragones(unam).
-esAragones(fes_aragon).
 esAragones(ardillas).
 
-esICO(aragones).
-esICO(computadora).
+% Definicion de ICO
+
+esICO(fesAragon).
+esICO(computadoras).
 esICO(programacion).
 
-%Reglas
+% --- REGLAS ---
