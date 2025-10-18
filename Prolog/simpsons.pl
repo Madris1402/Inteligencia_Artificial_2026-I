@@ -1,3 +1,5 @@
+% --- HECHOS ---
+
 % Se designan los padres de cada integrante
 padre(homero, maggie).
 padre(homero, lisa).
@@ -16,8 +18,38 @@ madre(jacqueline, selma).
 madre(jacqueline, patty).
 madre(mona, homero).
 
-%Regla para ver a los abuelos
+% --- REGLAS ---
 
-%Regla para ver a los tios
+% Progenitor (Padre o Madre)
+% P es progenitor de H si es su padre O su madre
+progenitor(P, H) :- padre(P, H).
+progenitor(P, H) :- madre(P, H).
 
-%Regla para ver a los hermanos
+% Abuelos
+abuelo(A, N) :-
+    padre(A, P),
+    progenitor(P, N).
+
+abuela(A, N) :-
+    madre(A, P),
+    progenitor(P, N).
+
+esAbuelo(A) :- abuelo(A, _); abuela(A, _).
+
+
+% Hermanos
+sonHermanos(H1, H2) :-
+    progenitor(P, H1),
+    progenitor(P, H2),
+    H1 \= H2.
+
+tieneHermanos(H) :- sonHermanos(H, _).
+
+
+% Tíos
+
+tio(T, S) :-
+    hermano(T, P),
+    progenitor(P, S).
+
+esTio(T) :- tio(T, _).
