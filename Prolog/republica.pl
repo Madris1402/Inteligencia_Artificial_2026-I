@@ -3,40 +3,40 @@
 % --- HECHOS ---
 
 % Estados
-% estado(Nombre, Extension_km2)
+% estado(Nombre)
 
-estado(aguascalientes, 5616).
-estado(baja_california, 71450).
-estado(baja_california_sur, 73909).
-estado(campeche, 57507).
-estado(chiapas, 73311).
-estado(chihuahua, 247412).
-estado(cdmx, 1495).
-estado(coahuila, 151595).
-estado(colima, 5627).
-estado(durango, 123364).
-estado(guanajuato, 30607).
-estado(guerrero, 63596).
-estado(hidalgo, 20813).
-estado(jalisco, 78588).
-estado(mexico, 22351).
-estado(michoacan, 58599).
-estado(morelos, 4879).
-estado(nayarit, 27857).
-estado(nuevo_leon, 64156).
-estado(oaxaca, 93757).
-estado(puebla, 34306).
-estado(queretaro, 11699).
-estado(quintana_roo, 44705).
-estado(san_luis_potosi, 61138).
-estado(sinaloa, 57365).
-estado(sonora, 179355).
-estado(tabasco, 24731).
-estado(tamaulipas, 80249).
-estado(tlaxcala, 3997).
-estado(veracruz, 71820).
-estado(yucatan, 39524).
-estado(zacatecas, 75284).
+estado(aguascalientes).
+estado(baja_california).
+estado(baja_california_sur).
+estado(campeche).
+estado(chiapas).
+estado(chihuahua).
+estado(cdmx).
+estado(coahuila).
+estado(colima).
+estado(durango).
+estado(guanajuato).
+estado(guerrero).
+estado(hidalgo).
+estado(jalisco).
+estado(mexico).
+estado(michoacan).
+estado(morelos).
+estado(nayarit).
+estado(nuevo_leon).
+estado(oaxaca).
+estado(puebla).
+estado(queretaro).
+estado(quintana_roo).
+estado(san_luis_potosi).
+estado(sinaloa).
+estado(sonora).
+estado(tabasco).
+estado(tamaulipas).
+estado(tlaxcala).
+estado(veracruz).
+estado(yucatan).
+estado(zacatecas).
 
 % Capitales
 % capital(estado, capital)
@@ -250,6 +250,80 @@ desTur(zacatecas, centro_historico_zacatecas).
 desTur(zacatecas, cerro_de_la_bufa).
 desTur(zacatecas, mina_el_eden).
 
+% Tipo de Superficie
+% superficie(estado, tipo de superficie, extension territorial en km2)
+
+superficie(aguascalientes, semidesierto, 5616).
+superficie(baja_california, desierto, 71450).
+superficie(baja_california_sur, desierto, 73909).
+superficie(campeche, selva_humeda, 57507).
+superficie(chiapas, selva_humeda, 73311).
+superficie(chihuahua, desierto, 247412).
+superficie(cdmx, urbano, 1495).
+superficie(coahuila, desierto, 151595).
+superficie(colima, costa, 5627).
+superficie(durango, sierra, 123364).
+superficie(guanajuato, matorral, 30607).
+superficie(guerrero, costa, 63596).
+superficie(hidalgo, sierra, 20813).
+superficie(jalisco, selva_seca, 78588).
+superficie(mexico, bosque_templado, 22351).
+superficie(michoacan, bosque_templado, 58599).
+superficie(morelos, selva_seca, 4879).
+superficie(nayarit, costa, 27857).
+superficie(nuevo_leon, semidesierto, 64156).
+superficie(oaxaca, sierra, 93757).
+superficie(puebla, volcanico, 34306).
+superficie(queretaro, semidesierto, 11699).
+superficie(quintana_roo, selva_humeda, 44705).
+superficie(san_luis_potosi, huasteca, 61138).
+superficie(sinaloa, costa, 57365).
+superficie(sonora, desierto, 179355).
+superficie(tabasco, selva_humeda, 24731).
+superficie(tamaulipas, costa, 80249).
+superficie(tlaxcala, bosque_templado, 3997).
+superficie(veracruz, costa_humeda, 71820).
+superficie(yucatan, selva_baja, 39524).
+superficie(zacatecas, semidesierto, 75284).
+
+% Distancia entre capitales
+% coordenadas(Capital, Latitud, Longitud)
+% La longitud para México es negativa (Oeste).
+
+coordenadas(aguascalientes, 21.88, -102.29).
+coordenadas(mexicali, 32.62, -115.45).
+coordenadas(la_paz, 24.14, -110.31).
+coordenadas(san_francisco_de_campeche, 19.83, -90.53).
+coordenadas(tuxtla_gutierrez, 16.75, -93.12).
+coordenadas(chihuahua, 28.63, -106.09).
+coordenadas(ciudad_de_mexico, 19.43, -99.13).
+coordenadas(saltillo, 25.42, -101.00).
+coordenadas(colima, 19.24, -103.72).
+coordenadas(victoria_de_durango, 24.02, -104.65).
+coordenadas(guanajuato, 21.02, -101.26).
+coordenadas(chilpancingo_de_los_bravo, 17.55, -99.50).
+coordenadas(pachuca_de_soto, 20.12, -98.73).
+coordenadas(guadalajara, 20.66, -103.35).
+coordenadas(toluca_de_lerdo, 19.28, -99.66).
+coordenadas(morelia, 19.70, -101.19).
+coordenadas(cuernavaca, 18.92, -99.23).
+coordenadas(tepic, 21.51, -104.89).
+coordenadas(monterrey, 25.69, -100.32).
+coordenadas(oaxaca_de_juarez, 17.06, -96.72).
+coordenadas(puebla_de_zaragoza, 19.04, -98.20).
+coordenadas(santiago_de_queretaro, 20.60, -100.39).
+coordenadas(chetumal, 18.50, -88.30).
+coordenadas(san_luis_potosi, 22.15, -100.98).
+coordenadas(culiacan_rosales, 24.81, -107.39).
+coordenadas(hermosillo, 29.10, -110.98).
+coordenadas(villahermosa, 17.99, -92.93).
+coordenadas(ciudad_victoria, 23.74, -99.14).
+coordenadas(tlaxcala_de_xicotencatl, 19.31, -98.24).
+coordenadas(xalapa_enriquez, 19.54, -96.93).
+coordenadas(merida, 20.97, -89.62).
+coordenadas(zacatecas, 22.77, -102.58).
+
+
 % --- REGLAS ---
 
 % Capitales y Estados
@@ -272,22 +346,57 @@ desTur(zacatecas, mina_el_eden).
 % Tamanio de los Estados
     % Si A de E es menor a 6000km2
     esPequenio(E) :- 
-        estado(E, A),
+        superficie(E, A),
         A < 6000.
 
     % Si A de E es mayor a 10000km2
     esGrande(E) :-
-        estado(E, A),
+        superficie(E, A),
         A > 100000.
 
     % A de E es comparada contra A de los demas estados hasta encontrar el caso donde A2 sea la mas grande
     masGrande(E) :- 
-        estado(E, A), \+ (estado(_, A2), A2 > A).
+        superficie(E, _, A), \+ (superficie(_, _, A2), A2 > A).
     
     % A de E es comparada contra A de los demas estados hasta encontrar el caso donde A2 sea la mas pequenia
     masPequenio(E) :- 
-        estado(E, A), \+ (estado(_, A2), A2 < A).
+        superficie(E, _, A), \+ (superficie(_, _, A2), A2 < A).
 
-distCapitales().
+    % S de E es extraida de los hechos de superficie
+    esSuperficie(E, S) :- 
+        superficie(E, _, S).
 
-esSuperficie().
+% Distancia Entre Capitales
+    % --- REGLA PARA CALCULAR DISTANCIA ENTRE CAPITALES ---
+
+    distanciaCapitales(Capital1, Capital2, Distancia) :-
+        % Obtener las coordenadas de ambas capitales
+        coordenadas(Capital1, Lat1, Lon1),
+        coordenadas(Capital2, Lat2, Lon2),
+
+        % Convertir grados a radianes para los cálculos trigonométricos
+        Lat1_rad is Lat1 * pi / 180,
+        Lon1_rad is Lon1 * pi / 180,
+        Lat2_rad is Lat2 * pi / 180,
+        Lon2_rad is Lon2 * pi / 180,
+
+        % Diferencia de latitudes y longitudes
+        DeltaLat is Lat2_rad - Lat1_rad,
+        DeltaLon is Lon2_rad - Lon1_rad,
+
+        % Fórmula de Haversine (Parte 1)
+        A is sin(DeltaLat / 2) * sin(DeltaLat / 2) +
+            cos(Lat1_rad) * cos(Lat2_rad) *
+            sin(DeltaLon / 2) * sin(DeltaLon / 2),
+
+        % Fórmula de Haversine (Parte 2)
+        C is 2 * atan2(sqrt(A), sqrt(1 - A)),
+
+        % Radio de la Tierra en kilómetros
+        RadioTierra = 6371,
+
+        % Calcular la distancia final sin redondear
+        Distancia_sin_redondear is RadioTierra * C,
+
+        % Redondear al entero más cercano como pediste
+        Distancia is round(Distancia_sin_redondear).
