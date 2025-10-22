@@ -296,7 +296,7 @@ coordenadas(la_paz, 24.14, -110.31).
 coordenadas(san_francisco_de_campeche, 19.83, -90.53).
 coordenadas(tuxtla_gutierrez, 16.75, -93.12).
 coordenadas(chihuahua, 28.63, -106.09).
-coordenadas(ciudad_de_mexico, 19.43, -99.13).
+coordenadas(cdmx, 19.43, -99.13).
 coordenadas(saltillo, 25.42, -101.00).
 coordenadas(colima, 19.24, -103.72).
 coordenadas(victoria_de_durango, 24.02, -104.65).
@@ -327,9 +327,6 @@ coordenadas(zacatecas, 22.77, -102.58).
 % --- REGLAS ---
 
 % Capitales y Estados
-    % Si E es un Estado, sin importar su Extension TerritoriaL (A)
-    esEstado(E) :- estado(E, _).
-
     % Si C es Capital de E y E es un estado
     esCapital(C, E) :-
         esEstado(E),
@@ -346,12 +343,12 @@ coordenadas(zacatecas, 22.77, -102.58).
 % Tamanio de los Estados
     % Si A de E es menor a 6000km2
     esPequenio(E) :- 
-        superficie(E, A),
-        A < 6000.
+        superficie(E, _, A),
+        A < 10000.
 
     % Si A de E es mayor a 10000km2
     esGrande(E) :-
-        superficie(E, A),
+        superficie(E, _, A),
         A > 100000.
 
     % A de E es comparada contra A de los demas estados hasta encontrar el caso donde A2 sea la mas grande
@@ -364,7 +361,7 @@ coordenadas(zacatecas, 22.77, -102.58).
 
     % S de E es extraida de los hechos de superficie
     esSuperficie(E, S) :- 
-        superficie(E, _, S).
+        superficie(E, S, _).
 
 % Distancia Entre Capitales
     % --- REGLA PARA CALCULAR DISTANCIA ENTRE CAPITALES ---
