@@ -327,17 +327,17 @@ coordenadas(zacatecas, 22.77, -102.58).
 % --- REGLAS ---
 
 % Capitales y Estados
-    % Si C es Capital de E y E es un estado
+    % Si C es Capital de E
     esCapital(C, E) :-
-        esEstado(E),
+        estado(E),
         capital(E, C).
     
     %Estados Limitrofes
     esLimitrofe(E1, E2) :- limitrofe(E1, E2); limitrofe(E2, E1).
 % Destinos Turisticos
-    % Si T es Destino Turistico de E y E es un estado
+    % Si T es Destino Turistico de E
     esTuristico(T, E) :-
-        esEstado(E),
+        estado(E),
         desTur(E, T).
 
 % Tamanio de los Estados
