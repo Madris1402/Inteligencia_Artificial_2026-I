@@ -22,7 +22,7 @@ def imprimir_tablero(tablero): # Función para imprimir el tablero
 
 
 def encontrar_vacio(tablero):
-    
+
     for i in range(N):
         for j in range(N):
             if tablero[i][j] == 0:
@@ -61,7 +61,7 @@ def resolver_sudoku(tablero):
     # Caso Base
     vacio = encontrar_vacio(tablero)
     if not vacio:
-        return True  # ¡Solución encontrada!
+        return True
 
     fila, col = vacio
 
@@ -80,7 +80,6 @@ def resolver_sudoku(tablero):
             # Backtrack
             tablero[fila][col] = 0
 
-    # Si ningún número del 1 al 9 funcionó, retornar False
     return False
 
 
@@ -135,13 +134,14 @@ if __name__ == "__main__":
     # Medio: ~40-45
     # Difícil: ~50-55
 
-    Selector = """
+    dif_input = int(input(
+    """
     Seleccione la dificultad:
     Fácil (Presionar 1)
     Medio (Presionar 2)
     Difícil (Presionar 3)
     """
-    dif_input = int(input(Selector))
+    ))
     dificultad = (dif_input * 15) + 15
 
     # Convertir el valor a texto para la interfaz
