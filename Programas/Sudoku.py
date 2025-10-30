@@ -4,10 +4,6 @@ import random
 N = 9
 
 def imprimir_tablero(tablero): # Función para imprimir el tablero
-    """
-    Imprime el tablero de Sudoku en un formato legible,
-    con separadores para las cajas de 3x3.
-    """
 
     for i in range(N):
         if i % 3 == 0 and i != 0:
@@ -26,6 +22,7 @@ def imprimir_tablero(tablero): # Función para imprimir el tablero
 
 
 def encontrar_vacio(tablero):
+    
     for i in range(N):
         for j in range(N):
             if tablero[i][j] == 0:
@@ -60,11 +57,6 @@ def es_valido(tablero, num, pos): # Verifica si el num es válido en la posició
     return True
 
 def resolver_sudoku(tablero):
-    """
-    Resuelve el tablero de Sudoku usando backtracking recursivo.
-    Modifica el tablero "in-place" (en el sitio).
-    Devuelve True si se encontró solución, False si no.
-    """
 
     # Caso Base
     vacio = encontrar_vacio(tablero)
@@ -83,10 +75,9 @@ def resolver_sudoku(tablero):
 
             # Llamada recursiva
             if resolver_sudoku(tablero):
-                return True  # Si la recursión tuvo éxito, propagar el éxito
+                return True
 
             # Backtrack
-            # Si la recursión falló, quitar el número y probar el siguiente
             tablero[fila][col] = 0
 
     # Si ningún número del 1 al 9 funcionó, retornar False
